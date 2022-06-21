@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+body{
+    background-color: beige;
+}
+
+/*Variables*/
+
+$grisoscuro:#444343;
+$grisclaro: #919191;
+
+/*Mixins*/
+
+@mixin cards ($color) {
+    background-color: ($color);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    div{
+        padding: 1.5rem;
+    }
+    h3{
+        font-size: 1.3rem;
+        padding: 1rem;
+        color: rgb(207, 204, 204);
+    }
+    p{
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+        color: rgb(187, 184, 184);
+    }
+   
+}
+
+/*Titulo*/
+
+header{
+    position: relative;
+    .titulo{
+        h1{
+            padding: 1rem;
+        font-size: 2rem;
+        background-color: $grisoscuro;
+        text-align: center;
+        a{
+            color: white;
+            text-decoration: none;
+            transition: .3s ease-in; 
+            &:hover{
+                color: black;
+                font-size: 3rem;
+                cursor: pointer;
+            }
+        }
+        }
+    }
+    
+    /*NavBar*/
+    
+    .navegador{
+        background-color: black;
+        color: white;
+        padding: 1.5rem 0;
+        margin: 1rem;
+        ul{
+            display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        list-style-type: none;
+        li{
+            display: inline;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        a{
+            color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        }
+        }
+        }
+    }
+}
+
+@import "index";
+@import "servicios";
+@import "contactos";
+@import "productos";
+@import "presupuestos";
+
+/*Footer*/
+
+.pie{
+    background-color: #000000;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+
+    h3{
+        font-size: 25px;
+    }
+    p{
+        margin-top: 1.5rem;
+    }
+}
+
+/*Media querys*/
+
+@media screen and (max-width: 415px){
+    .productos_container{
+        div{
+            width:39%;
+            img{
+                width: 8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 449px){
+    .servicios_iconos{
+        ul{
+            flex-wrap: wrap;
+            li{
+                img{
+                    width: 50px;
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+    }
+    .section_servicios{
+        .imagenes{
+            flex-wrap: wrap;
+            img{
+                width: 100%;
+            }
+        }   
+    }
+}
+
+@media screen and (max-width: 479px){
+    .productos_container{
+        div{
+            width:41%;
+            img{
+                width: 6rem;
+            }
+        }
+    }
+    .container{
+        .hero{
+            .hero_text{
+                h2{
+                    font-size: 2.8rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 545px){
+    .productos_container{
+        div{
+            width: 36%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 699px){
+    .servicios_iconos{
+        ul{
+            flex-wrap: wrap;
+            li{
+                width:33.3%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 745px){
+    
+    main{
+        flex-direction: column;
+        .filtros{
+            ul{
+                flex-direction: row;
+                flex-wrap: wrap;
+                li{
+                    width: 33.3%;
+                }
+            }
+        }
+        .productos_container{
+            div{
+                width: 40%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:783px){
+    .hero{
+        .card_1, .card_3{
+            grid-column: 1/-1;
+        }
+    }
+}
+
+@media screen and (max-width: 950px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+    }
+    main{
+        .productos_container{
+            div{
+                width: 27%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .navegador{
+        ul{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1170px){
+    .container{
+        .hero{
+            .hero_text{
+                width: 100%;
+                h2{
+                    font-size: 3rem;
+                }
+            }
+            .hero_img{
+                display: none;
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+    .section_servicios{
+        .imagenes{
+            flex-wrap: wrap;
+            img{
+                width: 50%;
+            }
+        }   
+    }
+}
+

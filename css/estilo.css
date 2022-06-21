@@ -1,0 +1,423 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif; }
+
+body {
+  background-color: beige; }
+
+/*Variables*/
+/*Mixins*/
+/*Titulo*/
+header {
+  position: relative;
+  /*NavBar*/ }
+  header .titulo h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #444343;
+    text-align: center; }
+    header .titulo h1 a {
+      color: white;
+      text-decoration: none;
+      transition: .3s ease-in; }
+      header .titulo h1 a:hover {
+        color: black;
+        font-size: 3rem;
+        cursor: pointer; }
+  header .navegador {
+    background-color: black;
+    color: white;
+    padding: 1.5rem 0;
+    margin: 1rem; }
+    header .navegador ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      list-style-type: none; }
+      header .navegador ul li {
+        display: inline;
+        text-transform: uppercase;
+        font-size: 1.6rem; }
+        header .navegador ul li a {
+          color: white;
+          text-decoration: none;
+          transition: 0.3s; }
+          header .navegador ul li a:hover {
+            font-size: 2rem;
+            cursor: pointer; }
+
+.container {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem; }
+  .container .hero {
+    background-color: #919191;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+    .container .hero .hero_text {
+      width: 70%;
+      text-align: center; }
+      .container .hero .hero_text h2 {
+        padding: 2rem;
+        font-size: 4rem;
+        text-align: start;
+        font-family: 'Kdam Thmor Pro', sans-serif; }
+      .container .hero .hero_text p {
+        padding: 0 2rem;
+        font-size: 2rem; }
+      .container .hero .hero_text button {
+        padding: 1rem;
+        background-color: black;
+        font-size: 1.2rem;
+        margin: 2rem;
+        transition: 0.2s; }
+        .container .hero .hero_text button a {
+          color: white;
+          text-decoration: none; }
+        .container .hero .hero_text button:hover {
+          font-size: 1.6rem; }
+    .container .hero .hero_img {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%; }
+      .container .hero .hero_img img {
+        width: 100%;
+        padding: 1rem; }
+  .container .cards {
+    display: flex; }
+    .container .cards .card1 {
+      background-color: #252525;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch; }
+      .container .cards .card1 div {
+        padding: 1.5rem; }
+      .container .cards .card1 h3 {
+        font-size: 1.3rem;
+        padding: 1rem;
+        color: #cfcccc; }
+      .container .cards .card1 p {
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+        color: #bbb8b8; }
+    .container .cards .card2 {
+      background-color: #252525;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch; }
+      .container .cards .card2 div {
+        padding: 1.5rem; }
+      .container .cards .card2 h3 {
+        font-size: 1.3rem;
+        padding: 1rem;
+        color: #cfcccc; }
+      .container .cards .card2 p {
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+        color: #bbb8b8; }
+    .container .cards .card3 {
+      background-color: #252525;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch; }
+      .container .cards .card3 div {
+        padding: 1.5rem; }
+      .container .cards .card3 h3 {
+        font-size: 1.3rem;
+        padding: 1rem;
+        color: #cfcccc; }
+      .container .cards .card3 p {
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+        color: #bbb8b8; }
+
+.servicios_iconos {
+  margin: 1rem; }
+  .servicios_iconos ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; }
+    .servicios_iconos ul li {
+      padding: 1rem;
+      width: 16.66%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .servicios_iconos ul li img {
+        width: 100px; }
+      .servicios_iconos ul li p {
+        display: none;
+        text-align: center;
+        padding: .5rem; }
+
+.section_servicios {
+  margin: 1rem;
+  background-color: #919191;
+  /*h2{
+        text-align: center;
+        font-size: 5rem;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }*/ }
+  .section_servicios .servicios {
+    text-align: start;
+    list-style-type: none; }
+    .section_servicios .servicios li {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      font-family: 'Kdam Thmor Pro', sans-serif;
+      font-weight: 600; }
+    .section_servicios .servicios p {
+      font-size: 1.5rem;
+      padding: 1rem 2rem; }
+  .section_servicios .imagenes {
+    display: flex;
+    overflow: hidden;
+    padding: 1rem; }
+    .section_servicios .imagenes img {
+      width: 25%; }
+
+.hero {
+  background-color: beige;
+  padding: 1rem;
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .hero .card_1 {
+    background-color: #919191;
+    grid-column: 1/2;
+    padding: 1rem;
+    text-align: center; }
+    .hero .card_1 h2 {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      font-family: 'Kdam Thmor Pro', sans-serif; }
+    .hero .card_1 ul {
+      list-style-type: none; }
+      .hero .card_1 ul li {
+        padding: 1rem 2rem;
+        font-size: 1.5rem; }
+      .hero .card_1 ul div {
+        padding: 1rem 2rem; }
+        .hero .card_1 ul div button {
+          padding: 1rem 2rem;
+          font-size: 1.3rem;
+          background-color: black; }
+          .hero .card_1 ul div button a {
+            color: white;
+            text-decoration: none;
+            transition: 0.4s; }
+            .hero .card_1 ul div button a:hover {
+              font-size: 1.5rem; }
+      .hero .card_1 ul p {
+        padding: 1rem 2rem;
+        font-size: 1.5rem; }
+        .hero .card_1 ul p a {
+          color: white; }
+          .hero .card_1 ul p a:hover {
+            color: black; }
+  .hero .card_3 {
+    background-color: #919191;
+    grid-column: 2/3;
+    align-self: stretch;
+    padding: 1rem;
+    text-align: center; }
+    .hero .card_3 h2 {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      font-family: 'Kdam Thmor Pro', sans-serif; }
+    .hero .card_3 .formulario {
+      font-size: 1.5rem;
+      padding: 0 2rem; }
+      .hero .card_3 .formulario button {
+        font-size: 1.3rem;
+        padding: 1rem;
+        background-color: black;
+        color: white;
+        margin-bottom: 1rem;
+        border: 1px solid black; }
+        .hero .card_3 .formulario button:hover {
+          cursor: pointer;
+          border: 1px solid white; }
+  .hero .card_2 {
+    background-color: #919191;
+    grid-column: 1/-1;
+    padding: 1rem;
+    text-align: center; }
+    .hero .card_2 h2 {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      font-family: 'Kdam Thmor Pro', sans-serif; }
+    .hero .card_2 ul {
+      list-style-type: none; }
+      .hero .card_2 ul li {
+        padding: 1rem 2rem;
+        font-size: 1.5rem; }
+        .hero .card_2 ul li iframe {
+          width: 100%;
+          height: 300px; }
+
+main {
+  display: flex; }
+  main .filtros {
+    margin: 1rem;
+    background-color: #919191; }
+    main .filtros ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      main .filtros ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center; }
+        main .filtros ul li:hover {
+          background-color: #303030; }
+        main .filtros ul li a {
+          color: black;
+          text-decoration: none;
+          font-family: 'Kdam Thmor Pro', sans-serif; }
+  main .productos_container {
+    background-color: #919191;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    main .productos_container div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #919191;
+      width: 20%;
+      margin: 1rem; }
+      main .productos_container div img {
+        width: 10rem;
+        background-color: #919191; }
+      main .productos_container div h2 {
+        font-size: 1rem;
+        margin: .5rem; }
+      main .productos_container div p {
+        font-size: 1rem; }
+      main .productos_container div button {
+        font-size: 1rem;
+        padding: 1rem;
+        color: white;
+        background-color: black;
+        margin: .5rem;
+        border: 3px solid black; }
+        main .productos_container div button:hover {
+          border: 3px solid white;
+          cursor: pointer; }
+
+.presupuestos_main {
+  background-color: #919191;
+  margin: 1rem; }
+  .presupuestos_main div {
+    padding: 1rem; }
+  .presupuestos_main h2 {
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: start;
+    font-family: 'Kdam Thmor Pro', sans-serif; }
+  .presupuestos_main p {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    text-align: center; }
+
+/*Footer*/
+.pie {
+  background-color: #000000;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center; }
+  .pie h3 {
+    font-size: 25px; }
+  .pie p {
+    margin-top: 1.5rem; }
+
+/*Media querys*/
+@media screen and (max-width: 415px) {
+  .productos_container div {
+    width: 39%; }
+    .productos_container div img {
+      width: 8rem; } }
+
+@media screen and (max-width: 449px) {
+  .servicios_iconos ul {
+    flex-wrap: wrap; }
+    .servicios_iconos ul li img {
+      width: 50px; }
+    .servicios_iconos ul li p {
+      display: none; }
+  .section_servicios .imagenes {
+    flex-wrap: wrap; }
+    .section_servicios .imagenes img {
+      width: 100%; } }
+
+@media screen and (max-width: 479px) {
+  .productos_container div {
+    width: 41%; }
+    .productos_container div img {
+      width: 6rem; }
+  .container .hero .hero_text h2 {
+    font-size: 2.8rem; }
+  .container .hero .hero_text p {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 545px) {
+  .productos_container div {
+    width: 36%; } }
+
+@media screen and (max-width: 699px) {
+  .servicios_iconos ul {
+    flex-wrap: wrap; }
+    .servicios_iconos ul li {
+      width: 33.3%; } }
+
+@media screen and (max-width: 745px) {
+  main {
+    flex-direction: column; }
+    main .filtros ul {
+      flex-direction: row;
+      flex-wrap: wrap; }
+      main .filtros ul li {
+        width: 33.3%; }
+    main .productos_container div {
+      width: 40%; } }
+
+@media screen and (max-width: 783px) {
+  .hero .card_1, .hero .card_3 {
+    grid-column: 1/-1; } }
+
+@media screen and (max-width: 950px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    text-align: start; }
+  main .productos_container div {
+    width: 27%; } }
+
+@media screen and (max-width: 1025px) {
+  .navegador ul {
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (max-width: 1170px) {
+  .container .hero .hero_text {
+    width: 100%; }
+    .container .hero .hero_text h2 {
+      font-size: 3rem; }
+  .container .hero .hero_img {
+    display: none; }
+    .container .hero .hero_img img {
+      display: none; }
+  .section_servicios .imagenes {
+    flex-wrap: wrap; }
+    .section_servicios .imagenes img {
+      width: 50%; } }
